@@ -1,18 +1,28 @@
-## Getting Started
+## Project Summary
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This project is part of the coursework for the "Computational Solutions Programming" course unit. It's a Java console-based system for managing urban events, enabling user registration, event creation, participation, and cancellation. The system features sorting events by time and persistence in a file.
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
+### Implemented Features
+- [x] User class creation
+- [x] User registration
+- [x] User reading
+- [x] User updating
+- [x] User deletion
+- [x] Event class creation
+- [x] Definition of event categories
+- [ ] Event registration
+- [ ] Event reading
+- [ ] Event updating
+- [ ] Event deletion
+- [ ] Persistence of users in file
+- [ ] Persistence of events in file
+- [ ] Participation in events
+- [ ] Participation cancellation in events
+- [ ] Sorting events by time
+- [ ] Identification of ongoing events
+- [ ] Recording past events
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+### Others
+- [ ] Login
+- [ ] Logout
