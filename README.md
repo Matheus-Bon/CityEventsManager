@@ -7,7 +7,7 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [x] User class creation
 - [x] User registration
 - [x] User reading
-- [x] User updating
+- [] User updating
 - [x] User deletion
 - [x] Event class creation
 - [x] Definition of event categories
@@ -15,13 +15,15 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [ ] Event reading
 - [ ] Event updating
 - [ ] Event deletion
-- [ ] Persistence of users in file
+- [x] Persistence of users in file
 - [ ] Persistence of events in file
 - [ ] Participation in events
 - [ ] Participation cancellation in events
 - [ ] Sorting events by time
 - [ ] Identification of ongoing events
 - [ ] Recording past events
+- [x] Search user by their attributes
+- [ ] Search event by their attributes
 
 ### Others
 - [ ] Login
