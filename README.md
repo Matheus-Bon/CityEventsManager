@@ -7,7 +7,7 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [x] User class creation
 - [x] User registration
 - [x] User reading
-- [] User updating
+- [x] User updating
 - [x] User deletion
 - [x] Event class creation
 - [x] Definition of event categories
@@ -20,6 +20,8 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [ ] Participation in events
 - [ ] Participation cancellation in events
 - [ ] Sorting events by time
+- [x] Sorting user by ID
+- [x] Sorting user by Name
 - [ ] Identification of ongoing events
 - [ ] Recording past events
 - [x] Search user by their attributes

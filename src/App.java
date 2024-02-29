@@ -8,7 +8,6 @@ public class App {
         Scanner menuScanner = new Scanner(System.in);
 
         do {
-            
             System.out.println();
             System.out.println("---- MENU ----");
             System.out.println("1. HANDLE USER");
