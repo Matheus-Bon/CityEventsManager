@@ -6,19 +6,20 @@ public class User implements Serializable {
     private int id;
     private String name;
     private String lastName;
-    private String email;
+    private String phone;
 
-    public User(int id, String name, String lastName, String email) {
+    public User(int id, String name, String lastName, String phone) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
-        this.email = email;
+        this.phone = phone;
     }
 
+    @Override
     public String toString() {
-        return id + "\t" + name + "\t\t" + lastName + "\t\t" + email;
+        return id + "\t" + name + "\t\t" + lastName + "\t\t" + phone;
     }
-
+ 
     public String getName() {
         return name;
     }
@@ -31,8 +32,8 @@ public class User implements Serializable {
         return lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getPhone() {
+        return phone;
     }
 
     

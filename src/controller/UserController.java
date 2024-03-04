@@ -1,13 +1,8 @@
 package controller;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectInput;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -22,21 +17,9 @@ public class UserController {
         int choice = -1;
         Scanner scanner = new Scanner(System.in);
         ArrayList<User> users = new ArrayList<User>();
-        File directory = new File("src/database");
-        File file = new File(directory, "user.txt");
-        ObjectOutputStream objectOut = null;
-        ObjectInput objectIn = null;
         ListIterator li = null;
 
-        if (!directory.exists()) {
-            directory.mkdirs();
-        }
-
-        if (file.isFile()) {
-            objectIn = new ObjectInputStream(new FileInputStream(file));
-            users = (ArrayList<User>) objectIn.readObject();
-            objectIn.close();
-        }
+        String pathName = "src/database/user.data";
 
         do {
             System.out.println();
@@ -55,6 +38,9 @@ public class UserController {
             System.out.println();
 
             switch (choice) {
+                case 0:
+                    scanner.close();
+                    break;
                 case 1:
                     System.out.print("How many users you want: ");
                     int n = scanner.nextInt();
@@ -80,16 +66,12 @@ public class UserController {
                         users.add(new User(userId, name, lastName, email));
                     }
 
-                    objectOut = new ObjectOutputStream(new FileOutputStream(file));
-                    objectOut.writeObject(users);
-                    objectOut.close();
+                    FileHandlerController.writeObject(pathName, users);
 
                     break;
                 case 2:
-                    if (file.isFile()) {
-                        objectIn = new ObjectInputStream(new FileInputStream(file));
-                        users = (ArrayList<User>) objectIn.readObject();
-                        objectIn.close();
+                    if (Paths.get(pathName) != null) {
+                        users = FileHandlerController.readObject(pathName);
                         System.out.println();
                         System.out.println("------------- USER LIST -------------");
                         System.out.println();
@@ -108,10 +90,8 @@ public class UserController {
                     break;
 
                 case 3:
-                    if (file.isFile()) {
-                        objectIn = new ObjectInputStream(new FileInputStream(file));
-                        users = (ArrayList<User>) objectIn.readObject();
-                        objectIn.close();
+                    if (Paths.get(pathName) != null) {
+                        users = FileHandlerController.readObject(pathName);
 
                         boolean found = false;
                         System.out.print("Enter your search: ");
@@ -124,7 +104,7 @@ public class UserController {
                         while (li.hasNext()) {
                             User user = (User) li.next();
                             if (user.getName().equals(search) ||
-                                    user.getEmail().equals(search) ||
+                                    user.getPhone().equals(search) ||
                                     user.getLastName().equals(search)) {
                                 System.out.println(user);
                                 found = true;
@@ -143,10 +123,8 @@ public class UserController {
                     break;
 
                 case 4:
-                    if (file.isFile()) {
-                        objectIn = new ObjectInputStream(new FileInputStream(file));
-                        users = (ArrayList<User>) objectIn.readObject();
-                        objectIn.close();
+                    if (Paths.get(pathName) != null) {
+                        users = FileHandlerController.readObject(pathName);
 
                         boolean found = false;
                         System.out.print("Enter ID to delete: ");
@@ -165,9 +143,7 @@ public class UserController {
                         }
 
                         if (found) {
-                            objectOut = new ObjectOutputStream(new FileOutputStream(file));
-                            objectOut.writeObject(users);
-                            objectOut.close();
+                            FileHandlerController.writeObject(pathName, users);
                             System.out.println("User deleted successfully");
                         } else
                             System.out.println("User not found");
@@ -181,10 +157,8 @@ public class UserController {
                     break;
 
                 case 5:
-                    if (file.isFile()) {
-                        objectIn = new ObjectInputStream(new FileInputStream(file));
-                        users = (ArrayList<User>) objectIn.readObject();
-                        objectIn.close();
+                    if (Paths.get(pathName) != null) {
+                        users = FileHandlerController.readObject(pathName);
 
                         boolean found = false;
                         System.out.print("Enter ID to update: ");
@@ -215,9 +189,7 @@ public class UserController {
                         }
 
                         if (found) {
-                            objectOut = new ObjectOutputStream(new FileOutputStream(file));
-                            objectOut.writeObject(users);
-                            objectOut.close();
+                            FileHandlerController.writeObject(pathName, users);
                             System.out.println("User updated successfully");
                         } else
                             System.out.println("User not found");
@@ -230,10 +202,8 @@ public class UserController {
                     System.out.println();
                     break;
                 case 6:
-                    if (file.isFile()) {
-                        objectIn = new ObjectInputStream(new FileInputStream(file));
-                        users = (ArrayList<User>) objectIn.readObject();
-                        objectIn.close();
+                    if (Paths.get(pathName) != null) {
+                        users = FileHandlerController.readObject(pathName);
 
                         Collections.sort(users, new Comparator<User>() {
                             public int compare(User u1, User u2) {
@@ -258,10 +228,8 @@ public class UserController {
                     System.out.println();
                     break;
                 case 7:
-                    if (file.isFile()) {
-                        objectIn = new ObjectInputStream(new FileInputStream(file));
-                        users = (ArrayList<User>) objectIn.readObject();
-                        objectIn.close();
+                    if (Paths.get(pathName) != null) {
+                        users = FileHandlerController.readObject(pathName);
 
                         Collections.sort(users, new Comparator<User>() {
                             public int compare(User u1, User u2) {
@@ -291,6 +259,8 @@ public class UserController {
             }
 
         } while (choice != 0);
+
+        scanner.close();
     }
 
 }

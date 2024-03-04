@@ -11,13 +11,13 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [x] User deletion
 - [x] Event class creation
 - [x] Definition of event categories
-- [ ] Event registration
-- [ ] Event reading
+- [x] Event registration
+- [x] Event reading
 - [ ] Event updating
 - [ ] Event deletion
 - [x] Persistence of users in file
-- [ ] Persistence of events in file
-- [ ] Participation in events
+- [x] Persistence of events in file
+- [x] Participation in events
 - [ ] Participation cancellation in events
 - [ ] Sorting events by time
 - [x] Sorting user by ID

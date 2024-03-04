@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import controller.EventController;
 import controller.UserController;
 
 public class App {
@@ -17,15 +18,23 @@ public class App {
             System.out.print("Enter your Choice: ");
             choice = menuScanner.nextInt();
             System.out.println();
-            
+
             switch (choice) {
+                case 0:
+                    menuScanner.close();
+                    break;
                 case 1:
                     UserController.handleUser();
                     break;
-            
+                case 2:
+                    EventController.handleEvent();
+                    break;
+
                 default:
+                    System.out.println("Item not found");
                     break;
             }
         } while (choice != 0);
+
     }
 }
