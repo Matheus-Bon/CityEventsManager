@@ -30,3 +30,7 @@ This project is part of the coursework for the "Computational Solutions Programm
 ### Others
 - [ ] Login
 - [ ] Logout
+
+### In progress...
+#### User Features
+[Gravação de tela de 04-03-2024 12:10:05.webm](https://github.com/Matheus-Bon/CityEventsManager/assets/98958613/b923459d-7aaf-46a4-996a-cecaf20e9dde)
