@@ -13,19 +13,19 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [x] Definition of event categories
 - [x] Event registration
 - [x] Event reading
-- [ ] Event updating
-- [ ] Event deletion
+- [x] Event updating
+- [x] Event deletion
 - [x] Persistence of users in file
 - [x] Persistence of events in file
 - [x] Participation in events
-- [ ] Participation cancellation in events
-- [ ] Sorting events by time
+- [x] Participation cancellation in events
+- [x] Sorting events by time
 - [x] Sorting user by ID
 - [x] Sorting user by Name
-- [ ] Identification of ongoing events
-- [ ] Recording past events
+- [-] Identification of ongoing events
+- [-] Recording past events
 - [x] Search user by their attributes
-- [ ] Search event by their attributes
+- [x] Search event by their attributes
 
 ### Others
 - [ ] Login
