@@ -2,6 +2,10 @@
 
 This project is part of the coursework for the "Computational Solutions Programming" course unit. It's a Java console-based system for managing urban events, enabling user registration, event creation, participation, and cancellation. The system features sorting events by time and persistence in a file.
 
+In this work, in addition to the fundamental concepts of object-oriented programming, comparison methods were used to create some types of ordering, for example, ordering by ID, Name, Price, Address, etc.
+
+The project's difference is the _data persistence_ of the User.java and Event.java models, in the *FileHandlerController* file in Controller. In it I use the _ObjectOutputStream_ and _ObjectInputStream_ classes, this way I can _Serialize_ the models to save in a .data file.
+
 
 ### Implemented Features
 - [x] User class creation
@@ -27,10 +31,18 @@ This project is part of the coursework for the "Computational Solutions Programm
 - [x] Search user by their attributes
 - [x] Search event by their attributes
 
-### Others
-- [ ] Login
-- [ ] Logout
+### Images
+#### Main Menu
+![alt text](image.png)
 
-### In progress...
-#### User Features
-[Gravação de tela de 04-03-2024 12:10:05.webm](https://github.com/Matheus-Bon/CityEventsManager/assets/98958613/b923459d-7aaf-46a4-996a-cecaf20e9dde)
+#### User Menu
+![alt text](image-1.png)
+
+#### User Table
+![alt text](image-4.png)
+
+#### Event Menu
+![alt text](image-2.png)
+
+#### Event Table
+![alt text](image-3.png)
